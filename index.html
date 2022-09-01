@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/ico/ico.png" type="image/x-icon" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gere sua senha</h1>
+      <div class="pass">
+        <div class="show-pass">
+          <input type="text" id="pwd" readonly />
+        </div>
+        <div class="copy">
+          <img src="./src/img/copy.png" alt="clique para copiar" id="copy" />
+          <span class="tooltip">clique para copiar</span>
+        </div>
+        <div class="generate">
+          <img
+            src="./src/img/generate.png"
+            alt="clique para gerar uma senha"
+            onclick="pwdGen()"
+          />
+          <span class="tooltip">clique para gerar uma senha</span>
+        </div>
+      </div>
+      <div class="options">
+        <h2>Opções para sua senha</h2>
+        <div class="chars-total">
+          <div class="chars-input">
+            Tamanho de sua senha
+            <div class="inputs">
+              <input
+                type="number"
+                id="inputnumber"
+                min="1"
+                max="128"
+                value="0"
+                onchange="pwdGen()"
+              />
+            </div>
+          </div>
+          <div class="more-options">
+            <div>
+              <input type="radio" name="secure" value="2" />
+              <label>Letras e simbolos</label>
+            </div>
+            <div>
+              <input type="radio" name="secure" value="3" />
+              <label>Letras, simbolos e numeros</label>
+            </div>
+            <div>
+              <input type="radio" name="secure" value="4" />
+              <label>Todos os caracteres permitidos</label>
+            </div>
+            <div class="default">
+              <input type="radio" name="secure" value="4" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/script/main.js"></script>
+  </body>
+</html>
